@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0Advent of JavaScript</title>
+    <link rel="stylesheet" href="./timer.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ring">
+            <!--<svg> с указанными атрибутами создает холст размером 518x518 пикселей, на котором можно отрисовывать векторную графику.-->
+            <svg width="518" height="518" viewBox="0 0 518 518">
+                <!--stroke-width="9px": Это устанавливает ширину обводки (контура) круга в 9 пикселей.-->
+                <circle stroke-width="9px" x="0" y="y" cx="259" cy="259" r="254" />
+                <!--весь этот элемент <circle> описывает круг с центром в (259, 259), радиусом 254 пикселя и обводкой толщиной 9 пикселей.-->
+            </svg>
+        </div>
+
+        <div class="timer">
+            <div class="time">
+                <div class="minutes">
+                    <!-- элемент <input> создает текстовое поле, предназначенное для ввода двузначного числа (вероятно, для ввода минут), и начальное значение этого поля установлено как "00".-->
+                    <input id="minutesInput" type="text" inputmode="numeric" maxlength="2" value="00" />
+                </div>
+                <div class="colon">:</div>
+                <div class="seconds">
+                    <input id="secondsInput" type="text" value="03" inputmode="numeric" maxlength="2" />
+                </div>
+            </div>
+            <button id="toggleTimerBtn" class="start">start</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
